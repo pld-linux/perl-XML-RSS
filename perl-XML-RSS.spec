@@ -1,7 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
 %define         pdir XML
 %define         pnam RSS
-
 Summary:	Module for RDF Site Summary (RSS) files managment
 Summary(pl):	Modu³ do zarz±dzania plikami RDF Site Summary (RSS)
 Name:		perl-%{pdir}-%{pnam}
@@ -10,9 +9,9 @@ Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.6.1
-BuildRequires:	perl-XML-Parser
+BuildRequires:	perl-XML-Parser >= 2.23
+BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -38,15 +37,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf BUGS TODO README Changes
-
-find $RPM_BUILD_ROOT -name .packlist | xargs -r rm -f
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc BUGS TODO README Changes
 %{perl_sitelib}/%{pdir}/%{pnam}.pm
 %{_mandir}/man3/*
-%doc *.gz

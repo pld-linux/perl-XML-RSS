@@ -4,7 +4,7 @@
 Summary:	Module for RDF Site Summary (RSS) files managment
 Summary(pl):	Modu³ do zarz±dzania plikami RDF Site Summary (RSS)
 Name:		perl-%{pdir}-%{pnam}
-Version:	1.01
+Version:	1.02
 Release:	1
 License:	GPL
 Group:		Development/Languages/Perl

@@ -5,12 +5,13 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	XML
 %define	pnam	RSS
-Summary:	Module for RDF Site Summary (RSS) files managment
-Summary(pl):	Modu³ do zarz±dzania plikami RDF Site Summary (RSS)
+Summary:	XML::RSS - module for RDF Site Summary (RSS) files managment
+Summary(pl):	XML::RSS - modu³ do zarz±dzania plikami RDF Site Summary (RSS)
 Name:		perl-%{pdir}-%{pnam}
 Version:	1.04
 Release:	1
-License:	GPL
+# same as perl
+License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	7fd0c5393c3fffac0dcf447d9f0dfb4f

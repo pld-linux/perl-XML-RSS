@@ -7,7 +7,7 @@
 %define	pnam	RSS
 Summary:	XML::RSS - module for RDF Site Summary (RSS) files managment
 Summary(pl):	XML::RSS - modu³ do zarz±dzania plikami RDF Site Summary (RSS)
-Name:		perl-%{pdir}-%{pnam}
+Name:		perl-XML-RSS
 Version:	1.04
 Release:	2
 # same as perl

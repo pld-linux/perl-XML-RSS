@@ -4,8 +4,8 @@
 Summary:	Module for RDF Site Summary (RSS) files managment
 Summary(pl):	Modu³ do zarz±dzania plikami RDF Site Summary (RSS)
 Name:		perl-%{pdir}-%{pnam}
-Version:	0.97
-Release:	2
+Version:	1.01
+Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -42,6 +42,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc BUGS TODO README Changes
+%doc TODO README Changes
 %{perl_sitelib}/%{pdir}/%{pnam}.pm
 %{_mandir}/man3/*

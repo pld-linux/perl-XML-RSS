@@ -9,7 +9,7 @@ Summary:	XML::RSS - module for RDF Site Summary (RSS) files managment
 Summary(pl):	XML::RSS - modu³ do zarz±dzania plikami RDF Site Summary (RSS)
 Name:		perl-%{pdir}-%{pnam}
 Version:	1.04
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -46,6 +46,7 @@ pliki RSS.
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{perl_vendorlib}/XML/RSS
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
@@ -56,5 +57,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc TODO README Changes
-%{perl_vendorlib}/%{pdir}/%{pnam}.pm
+%{perl_vendorlib}/XML/RSS.pm
+%dir %{perl_vendorlib}/XML/RSS
 %{_mandir}/man3/*

@@ -5,13 +5,13 @@ Summary:	Module for RDF Site Summary (RSS) files managment
 Summary(pl):	Modu³ do zarz±dzania plikami RDF Site Summary (RSS)
 Name:		perl-%{pdir}-%{pnam}
 Version:	1.02
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5.6.1
 BuildRequires:	perl-XML-Parser >= 2.23
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -29,7 +29,8 @@ pliki RSS.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make}
 
 %install
@@ -43,5 +44,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc TODO README Changes
-%{perl_sitelib}/%{pdir}/%{pnam}.pm
+%{perl_vendorlib}/%{pdir}/%{pnam}.pm
 %{_mandir}/man3/*

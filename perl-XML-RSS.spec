@@ -1,6 +1,10 @@
+#
+# Conditional build:
+%bcond_without tests	# do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
-%define         pdir XML
-%define         pnam RSS
+%define	pdir	XML
+%define	pnam	RSS
 Summary:	Module for RDF Site Summary (RSS) files managment
 Summary(pl):	Modu³ do zarz±dzania plikami RDF Site Summary (RSS)
 Name:		perl-%{pdir}-%{pnam}
@@ -10,8 +14,11 @@ License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	ce6ea96f39874ac23e35d8e1b85557ac
-BuildRequires:	perl-devel >= 5.6.1
+%if %{with tests}
+BuildRequires:	perl-Test-Manifest >= 0.9
 BuildRequires:	perl-XML-Parser >= 2.23
+%endif
+BuildRequires:	perl-devel >= 5.6.1
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -34,10 +41,13 @@ pliki RSS.
 	INSTALLDIRS=vendor
 %{__make}
 
+%{?with_tests:%{__make} test}
+
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT

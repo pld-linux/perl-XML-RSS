@@ -16,7 +16,7 @@ BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%description 
+%description
 This module was created to help those who need to manage RDF Site
 Summary (RSS) files. It makes quick work of creating, updating, and
 saving RSS files.
@@ -31,7 +31,7 @@ pliki RSS.
 
 %build
 %{__perl} Makefile.PL \
-	INSTALLDIRS=vendor 
+	INSTALLDIRS=vendor
 %{__make}
 
 %install

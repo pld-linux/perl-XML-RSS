@@ -1,6 +1,7 @@
 #
 # Conditional build:
-%bcond_without	tests	# do not perform "make test"
+%bcond_with	tests	# perform "make test"
+#			  (t/008_store_retrieve.t require network fetch)
 #
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	XML

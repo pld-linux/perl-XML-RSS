@@ -7,7 +7,7 @@
 %define		pdir	XML
 %define		pnam	RSS
 Summary:	XML::RSS - module for RDF Site Summary (RSS) files managment
-Summary(pl.UTF-8):   XML::RSS - moduł do zarządzania plikami RDF Site Summary (RSS)
+Summary(pl.UTF-8):	XML::RSS - moduł do zarządzania plikami RDF Site Summary (RSS)
 Name:		perl-XML-RSS
 Version:	1.11
 Release:	1

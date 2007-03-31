@@ -14,8 +14,9 @@ Release:	0.1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/XML/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	0ae1aca75c024dfe2e1306881963ff39
+URL:		http://search.cpan.org/dist/XML-RSS/
 %if %{with tests}
 BuildRequires:	perl-Test-Manifest >= 0.9
 BuildRequires:	perl-XML-Parser >= 2.23

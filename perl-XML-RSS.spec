@@ -10,7 +10,7 @@ Summary:	XML::RSS - module for RDF Site Summary (RSS) files managment
 Summary(pl.UTF-8):	XML::RSS - moduł do zarządzania plikami RDF Site Summary (RSS)
 Name:		perl-XML-RSS
 Version:	1.22
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl

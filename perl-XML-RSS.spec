@@ -62,4 +62,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc TODO README Changes
 %{perl_vendorlib}/XML/RSS.pm
 %dir %{perl_vendorlib}/XML/RSS
-%{_mandir}/man3/*
+%{perl_vendorlib}/XML/RSS/Private
+%{_mandir}/man3/XML::RSS.3pm*

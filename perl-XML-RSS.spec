@@ -1,7 +1,6 @@
 #
 # Conditional build:
-%bcond_with	tests	# perform "make test"
-#			  (t/008_store_retrieve.t require network fetch)
+%bcond_without	tests	# don't perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	XML
@@ -18,6 +17,8 @@ Source0:	http://www.cpan.org/modules/by-module/XML/%{pdir}-%{pnam}-%{version}.ta
 # Source0-md5:	9dfd319f9562ddd0abd7d4a4cab5e0dd
 URL:		http://search.cpan.org/dist/XML-RSS/
 %if %{with tests}
+BuildRequires:	perl-DateTime-Format-Mail
+BuildRequires:	perl-DateTime-Format-W3CDTF
 BuildRequires:	perl-Test-Manifest >= 0.9
 BuildRequires:	perl-XML-Parser >= 2.23
 %endif

@@ -8,13 +8,13 @@
 Summary:	XML::RSS - module for RDF Site Summary (RSS) files managment
 Summary(pl.UTF-8):	XML::RSS - moduł do zarządzania plikami RDF Site Summary (RSS)
 Name:		perl-XML-RSS
-Version:	1.40
-Release:	2
+Version:	1.42
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/XML/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	9dfd319f9562ddd0abd7d4a4cab5e0dd
+# Source0-md5:	1f8abe432150eaaf8a24466873647049
 URL:		http://search.cpan.org/dist/XML-RSS/
 %if %{with tests}
 BuildRequires:	perl-DateTime-Format-Mail

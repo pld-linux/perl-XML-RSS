@@ -1,10 +1,10 @@
 #
 # Conditional build:
 %bcond_without	tests	# don't perform "make test"
-#
-%include	/usr/lib/rpm/macros.perl
+
 %define		pdir	XML
 %define		pnam	RSS
+%include	/usr/lib/rpm/macros.perl
 Summary:	XML::RSS - module for RDF Site Summary (RSS) files managment
 Summary(pl.UTF-8):	XML::RSS - moduł do zarządzania plikami RDF Site Summary (RSS)
 Name:		perl-XML-RSS
@@ -19,6 +19,7 @@ URL:		http://search.cpan.org/dist/XML-RSS/
 %if %{with tests}
 BuildRequires:	perl-DateTime-Format-Mail
 BuildRequires:	perl-DateTime-Format-W3CDTF
+BuildRequires:	perl-HTML-Parser
 BuildRequires:	perl-Test-Manifest >= 0.9
 BuildRequires:	perl-XML-Parser >= 2.23
 %endif

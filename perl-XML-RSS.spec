@@ -4,7 +4,6 @@
 
 %define		pdir	XML
 %define		pnam	RSS
-%include	/usr/lib/rpm/macros.perl
 Summary:	XML::RSS - module for RDF Site Summary (RSS) files managment
 Summary(pl.UTF-8):	XML::RSS - moduł do zarządzania plikami RDF Site Summary (RSS)
 Name:		perl-XML-RSS

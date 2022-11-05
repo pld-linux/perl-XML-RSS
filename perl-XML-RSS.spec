@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_without	tests	# don't perform "make test"
+%bcond_without	tests	# unit tests
 
 %define		pdir	XML
 %define		pnam	RSS
@@ -14,7 +14,7 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/XML/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	e08802800b7ef7a7b9e043e82eabdfe8
-URL:		http://search.cpan.org/dist/XML-RSS/
+URL:		https://metacpan.org/dist/XML-RSS
 %if %{with tests}
 BuildRequires:	perl-DateTime-Format-Mail
 BuildRequires:	perl-DateTime-Format-W3CDTF
@@ -24,6 +24,7 @@ BuildRequires:	perl-XML-Parser >= 2.23
 %endif
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.745
 Provides:	perl(XML::RSS::Creator)
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
